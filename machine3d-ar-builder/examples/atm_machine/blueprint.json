@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "id": "atm_machine",
+  "displayName": "ATM with dispensing mechanism (concept)",
+  "machineType": "ATM",
+  "accuracy": "conceptual-educational",
+  "units": "meters",
+  "coordinateSystem": "Z_UP",
+  "components": [
+    {
+      "id": "Cabinet",
+      "name": "ATM cabinet",
+      "description": "Encloses computing, banking, and cash transport modules.",
+      "primitive": "box",
+      "position": [
+        0,
+        0,
+        0.75
+      ],
+      "dimensions": {
+        "x": 0.56,
+        "y": 0.4,
+        "z": 1.5
+      },
+      "material": "aluminum",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Screen",
+      "name": "Display",
+      "description": "Shows transaction instructions.",
+      "primitive": "box",
+      "position": [
+        0,
+        -0.207,
+        1.22
+      ],
+      "dimensions": {
+        "x": 0.34,
+        "y": 0.012,
+        "z": 0.24
+      },
+      "material": "dark",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Keypad",
+      "name": "Keypad",
+      "description": "Accepts PIN entry and commands.",
+      "primitive": "box",
+      "position": [
+        0,
+        -0.23,
+        0.91
+      ],
+      "dimensions": {
+        "x": 0.23,
+        "y": 0.027,
+        "z": 0.13
+      },
+      "material": "steel",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CardSlot",
+      "name": "Card reader",
+      "description": "Guides cards through the reader mechanism.",
+      "primitive": "box",
+      "position": [
+        0.15,
+        -0.219,
+        1.04
+      ],
+      "dimensions": {
+        "x": 0.12,
+        "y": 0.022,
+        "z": 0.03
+      },
+      "material": "blue",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CashSlot",
+      "name": "Cash dispensing slot",
+      "description": "Opening for dispensed banknotes.",
+      "primitive": "box",
+      "position": [
+        0,
+        -0.219,
+        0.65
+      ],
+      "dimensions": {
+        "x": 0.34,
+        "y": 0.025,
+        "z": 0.045
+      },
+      "material": "dark",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CashCassette",
+      "name": "Cash cassette",
+      "description": "Removable internal banknote storage.",
+      "primitive": "box",
+      "position": [
+        0,
+        0.0,
+        0.4
+      ],
+      "dimensions": {
+        "x": 0.39,
+        "y": 0.22,
+        "z": 0.16
+      },
+      "material": "green",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "TransportRoller1",
+      "name": "Feed roller",
+      "description": "Moves banknotes along the dispensing path.",
+      "primitive": "cylinder",
+      "position": [
+        -0.08,
+        -0.07,
+        0.66
+      ],
+      "dimensions": {
+        "radius": 0.017,
+        "depth": 0.26,
+        "axis": "X"
+      },
+      "material": "copper",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "TransportRoller2",
+      "name": "Output roller",
+      "description": "Transfers banknotes toward the exit.",
+      "primitive": "cylinder",
+      "position": [
+        0.08,
+        -0.07,
+        0.66
+      ],
+      "dimensions": {
+        "radius": 0.017,
+        "depth": 0.26,
+        "axis": "X"
+      },
+      "material": "copper",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "animation": {
+    "schemaVersion": 2,
+    "machineId": "atm_machine",
+    "mechanism": "generic_joints",
+    "defaultRPM": 60,
+    "maxRPM": 600,
+    "joints": [
+      {
+        "entity": "TransportRoller1",
+        "type": "rotate",
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      },
+      {
+        "entity": "TransportRoller2",
+        "type": "rotate",
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "ratio": -1,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      }
+    ]
+  },
+  "warnings": [
+    "Conceptual teaching model, not a specific manufacturer's secure ATM architecture.",
+    "Actual dispenser timing, sensors and banknote path require a verified design."
+  ]
+}

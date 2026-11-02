@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "id": "gas_turbine",
+  "displayName": "Single-spool gas turbine (cutaway concept)",
+  "machineType": "gas turbine / jet engine",
+  "accuracy": "conceptual-educational",
+  "components": [
+    {
+      "id": "OuterCase",
+      "name": "Engine casing",
+      "description": "Encloses compression, combustion and turbine stages.",
+      "entityName": "OuterCase",
+      "movable": false
+    },
+    {
+      "id": "Intake",
+      "name": "Air intake",
+      "description": "Guides incoming air toward the compressor.",
+      "entityName": "Intake",
+      "movable": false
+    },
+    {
+      "id": "CompressorRotor",
+      "name": "Compressor rotor",
+      "description": "Accelerates incoming air before combustion.",
+      "entityName": "CompressorRotor",
+      "movable": true
+    },
+    {
+      "id": "CompressorStator",
+      "name": "Stationary compressor guide",
+      "description": "Guides compressed airflow through the engine core.",
+      "entityName": "CompressorStator",
+      "movable": false
+    },
+    {
+      "id": "CombustionChamber",
+      "name": "Combustion chamber",
+      "description": "Mixes fuel and pressurized air, releasing heat during combustion.",
+      "entityName": "CombustionChamber",
+      "movable": false
+    },
+    {
+      "id": "TurbineRotor",
+      "name": "Turbine rotor",
+      "description": "Extracts work from hot gas to drive the compressor shaft.",
+      "entityName": "TurbineRotor",
+      "movable": true
+    },
+    {
+      "id": "MainShaft",
+      "name": "Central shaft",
+      "description": "Couples turbine torque to the compressor rotor.",
+      "entityName": "MainShaft",
+      "movable": true
+    },
+    {
+      "id": "Nozzle",
+      "name": "Exhaust nozzle",
+      "description": "Channels hot exhaust gas rearward.",
+      "entityName": "Nozzle",
+      "movable": false
+    }
+  ],
+  "warnings": [
+    "Schematic compressor and turbine discs, not true aerodynamically designed blades.",
+    "No air thermodynamics, fuel injection, thermal stress, thrust or fluid simulation."
+  ]
+}

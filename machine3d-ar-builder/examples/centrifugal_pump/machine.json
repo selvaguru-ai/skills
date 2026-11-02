@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "centrifugal_pump",
+  "displayName": "Centrifugal pump (conceptual cutaway)",
+  "machineType": "centrifugal pump",
+  "accuracy": "conceptual-educational",
+  "components": [
+    {
+      "id": "PumpHousing",
+      "name": "Volute housing",
+      "description": "Contains the impeller and channels liquid toward the outlet.",
+      "entityName": "PumpHousing",
+      "movable": false
+    },
+    {
+      "id": "Impeller",
+      "name": "Impeller",
+      "description": "Transfers rotating shaft energy into liquid flow.",
+      "entityName": "Impeller",
+      "movable": true
+    },
+    {
+      "id": "Shaft",
+      "name": "Drive shaft",
+      "description": "Turns the impeller.",
+      "entityName": "Shaft",
+      "movable": true
+    },
+    {
+      "id": "Inlet",
+      "name": "Suction inlet",
+      "description": "Fluid enters axially near the impeller eye.",
+      "entityName": "Inlet",
+      "movable": false
+    },
+    {
+      "id": "Outlet",
+      "name": "Discharge outlet",
+      "description": "Fluid exits the pump casing.",
+      "entityName": "Outlet",
+      "movable": false
+    },
+    {
+      "id": "Base",
+      "name": "Pump mount",
+      "description": "Supports the housing.",
+      "entityName": "Base",
+      "movable": false
+    }
+  ],
+  "warnings": [
+    "Impeller blade and casing are simplified visualizations; no CFD or flow accuracy."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "machine_id": "two_stroke_engine",
+  "display_name": "Educational single-cylinder two-stroke gasoline engine",
+  "bore_m": 0.064,
+  "stroke_m": 0.054,
+  "rod_length_m": 0.105,
+  "piston_height_m": 0.038,
+  "wrist_to_crown_m": 0.018,
+  "crank_web_radius_m": 0.042,
+  "cylinder_base_z_m": 0.071,
+  "cylinder_top_z_m": 0.153,
+  "cylinder_wall_m": 0.004,
+  "exhaust_top_z_m": 0.116,
+  "exhaust_bottom_z_m": 0.096,
+  "transfer_top_z_m": 0.103,
+  "transfer_bottom_z_m": 0.086,
+  "intake_top_z_m": 0.089,
+  "intake_bottom_z_m": 0.075,
+  "render_samples": 120,
+  "approximate": true,
+  "crank_radius_m": 0.027,
+  "displacement_cc": 173.72
+}

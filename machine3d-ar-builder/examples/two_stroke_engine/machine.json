@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "id": "two_stroke_engine",
+  "displayName": "Educational single-cylinder two-stroke gasoline engine",
+  "machineType": "single-cylinder, piston-port, crankcase-scavenged two-stroke spark-ignition",
+  "accuracy": "conceptual-educational",
+  "dimensions": {
+    "machine_id": "two_stroke_engine",
+    "display_name": "Educational single-cylinder two-stroke gasoline engine",
+    "bore_m": 0.064,
+    "stroke_m": 0.054,
+    "rod_length_m": 0.105,
+    "piston_height_m": 0.038,
+    "wrist_to_crown_m": 0.018,
+    "crank_web_radius_m": 0.042,
+    "cylinder_base_z_m": 0.071,
+    "cylinder_top_z_m": 0.153,
+    "cylinder_wall_m": 0.004,
+    "exhaust_top_z_m": 0.116,
+    "exhaust_bottom_z_m": 0.096,
+    "transfer_top_z_m": 0.103,
+    "transfer_bottom_z_m": 0.086,
+    "intake_top_z_m": 0.089,
+    "intake_bottom_z_m": 0.075,
+    "render_samples": 120,
+    "approximate": true,
+    "crank_radius_m": 0.027,
+    "displacement_cc": 173.72
+  },
+  "components": [
+    {
+      "id": "CylinderBlock",
+      "name": "Cylinder block",
+      "description": "Guides piston motion and contains exhaust, transfer, and intake ports.",
+      "movable": false,
+      "entityName": "CylinderBlock"
+    },
+    {
+      "id": "CylinderHead",
+      "name": "Cylinder head",
+      "description": "Seals combustion chamber and carries the spark plug.",
+      "movable": false,
+      "entityName": "CylinderHead"
+    },
+    {
+      "id": "PistonAssembly",
+      "name": "Piston",
+      "description": "Receives combustion pressure and moves along the cylinder.",
+      "movable": true,
+      "entityName": "PistonAssembly"
+    },
+    {
+      "id": "PistonRing_01",
+      "name": "Top piston ring",
+      "description": "Helps seal gases against cylinder wall.",
+      "movable": true,
+      "entityName": "PistonRing_01"
+    },
+    {
+      "id": "PistonRing_02",
+      "name": "Second piston ring",
+      "description": "Supports sealing and heat transfer.",
+      "movable": true,
+      "entityName": "PistonRing_02"
+    },
+    {
+      "id": "WristPin",
+      "name": "Wrist pin",
+      "description": "Connects piston and small connecting-rod end.",
+      "movable": true,
+      "entityName": "WristPin"
+    },
+    {
+      "id": "ConnectingRodAssembly",
+      "name": "Connecting rod",
+      "description": "Transfers piston force to crankshaft and oscillates.",
+      "movable": true,
+      "entityName": "ConnectingRodAssembly"
+    },
+    {
+      "id": "CrankshaftAssembly",
+      "name": "Crankshaft",
+      "description": "Converts reciprocating motion to rotation.",
+      "movable": true,
+      "entityName": "CrankshaftAssembly"
+    },
+    {
+      "id": "CrankWeb_Left",
+      "name": "Left crank web",
+      "description": "Supports offset crank pin.",
+      "movable": true,
+      "entityName": "CrankWeb_Left"
+    },
+    {
+      "id": "CrankWeb_Right",
+      "name": "Right crank web",
+      "description": "Supports offset crank pin.",
+      "movable": true,
+      "entityName": "CrankWeb_Right"
+    },
+    {
+      "id": "CrankPin",
+      "name": "Crank pin",
+      "description": "Connects the rod big end to the crank throw.",
+      "movable": true,
+      "entityName": "CrankPin"
+    },
+    {
+      "id": "Flywheel",
+      "name": "Flywheel",
+      "description": "Stores rotational energy to smooth crank rotation.",
+      "movable": true,
+      "entityName": "Flywheel"
+    },
+    {
+      "id": "Crankcase",
+      "name": "Crankcase",
+      "description": "Encloses crankshaft and precompresses incoming mixture.",
+      "movable": false,
+      "entityName": "Crankcase"
+    },
+    {
+      "id": "SparkPlug",
+      "name": "Spark plug",
+      "description": "Ignites compressed air-fuel mixture near top dead center.",
+      "movable": false,
+      "entityName": "SparkPlug"
+    },
+    {
+      "id": "ExhaustPort",
+      "name": "Exhaust port",
+      "description": "Allows burnt exhaust gases to escape when uncovered.",
+      "movable": false,
+      "entityName": "ExhaustPort"
+    },
+    {
+      "id": "TransferPort",
+      "name": "Transfer ports",
+      "description": "Connect crankcase to cylinder during scavenging.",
+      "movable": false,
+      "entityName": "TransferPort"
+    },
+    {
+      "id": "IntakePort",
+      "name": "Intake port",
+      "description": "Admits fresh mixture into crankcase during the induction phase.",
+      "movable": false,
+      "entityName": "IntakePort"
+    }
+  ],
+  "stages": [
+    {
+      "id": "compression",
+      "label": "Upstroke: compression and crankcase intake",
+      "degrees": [
+        180,
+        360
+      ]
+    },
+    {
+      "id": "power",
+      "label": "Downstroke: combustion, exhaust, and scavenging",
+      "degrees": [
+        0,
+        180
+      ]
+    }
+  ],
+  "warnings": [
+    "All dimensions are illustrative, not sourced from a manufacturer.",
+    "Simplified port shapes and gas flows; no fluid dynamics or structural safety certification.",
+    "For real engineering accuracy, replace with manufacturer drawings and verify port timing."
+  ]
+}

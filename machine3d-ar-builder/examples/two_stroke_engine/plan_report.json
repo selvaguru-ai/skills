@@ -1,0 +1,18 @@
+{
+  "prompt": "Create a two-stroke motorcycle engine with realistic components, working animations, and RealityKit integration",
+  "machineId": "two_stroke_engine",
+  "accuracy": "conceptual-educational",
+  "referenceStatus": "fallback-geometry-without-external-images",
+  "kinematics": {
+    "passed": true,
+    "errors": [],
+    "samples": 361,
+    "maxRodLengthErrorM": 2.7755575615628914e-17,
+    "observedStrokeM": 0.054000000000000006,
+    "minHeadClearanceM": 0.0030000000000000027
+  },
+  "metadata": {
+    "passed": true,
+    "errors": []
+  }
+}

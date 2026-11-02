@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "machineId": "two_stroke_engine",
+  "mechanism": "crank_slider",
+  "units": "meters",
+  "twoStrokeRevolutionsPerCycle": 1,
+  "crankRadius": 0.027,
+  "connectingRodLength": 0.105,
+  "wristToCrown": 0.018,
+  "defaultRPM": 600,
+  "maxRPM": 6000,
+  "coordinateSystem": {
+    "blender": "Z_UP, crankshaft axis Y",
+    "runtime": "Y_UP, crankshaft axis -Z; assumes Blender USD axis conversion"
+  },
+  "entities": {
+    "piston": "PistonAssembly",
+    "crankshaft": "CrankshaftAssembly",
+    "connectingRod": "ConnectingRodAssembly"
+  },
+  "notes": [
+    "Runtime uses the analytical crank-slider mechanism; exported preview animation is not required.",
+    "Review coordinate conversion on an iPhone before publishing other machines."
+  ]
+}

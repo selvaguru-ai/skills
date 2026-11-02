@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "id": "centrifugal_pump",
+  "displayName": "Centrifugal pump (conceptual cutaway)",
+  "machineType": "centrifugal pump",
+  "accuracy": "conceptual-educational",
+  "units": "meters",
+  "coordinateSystem": "Z_UP",
+  "components": [
+    {
+      "id": "PumpHousing",
+      "name": "Volute housing",
+      "description": "Contains the impeller and channels liquid toward the outlet.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": {
+        "outerRadius": 0.11,
+        "innerRadius": 0.085,
+        "depth": 0.055,
+        "axis": "Y"
+      },
+      "material": "aluminum",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Impeller",
+      "name": "Impeller",
+      "description": "Transfers rotating shaft energy into liquid flow.",
+      "primitive": "gear",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": {
+        "radius": 0.072,
+        "depth": 0.018,
+        "teeth": 8,
+        "axis": "Y"
+      },
+      "material": "copper",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Shaft",
+      "name": "Drive shaft",
+      "description": "Turns the impeller.",
+      "primitive": "cylinder",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": {
+        "radius": 0.009,
+        "depth": 0.2,
+        "axis": "Y"
+      },
+      "material": "steel",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Inlet",
+      "name": "Suction inlet",
+      "description": "Fluid enters axially near the impeller eye.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        -0.056,
+        0
+      ],
+      "dimensions": {
+        "outerRadius": 0.031,
+        "innerRadius": 0.024,
+        "depth": 0.08,
+        "axis": "Y"
+      },
+      "material": "blue",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Outlet",
+      "name": "Discharge outlet",
+      "description": "Fluid exits the pump casing.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0.094,
+        0.02,
+        0.06
+      ],
+      "dimensions": {
+        "outerRadius": 0.026,
+        "innerRadius": 0.02,
+        "depth": 0.085,
+        "axis": "Z"
+      },
+      "material": "blue",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Base",
+      "name": "Pump mount",
+      "description": "Supports the housing.",
+      "primitive": "box",
+      "position": [
+        0,
+        0,
+        -0.137
+      ],
+      "dimensions": {
+        "x": 0.22,
+        "y": 0.17,
+        "z": 0.017
+      },
+      "material": "dark",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "animation": {
+    "schemaVersion": 2,
+    "machineId": "centrifugal_pump",
+    "mechanism": "generic_joints",
+    "defaultRPM": 900,
+    "maxRPM": 5000,
+    "joints": [
+      {
+        "entity": "Impeller",
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      },
+      {
+        "entity": "Shaft",
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      }
+    ]
+  },
+  "warnings": [
+    "Impeller blade and casing are simplified visualizations; no CFD or flow accuracy."
+  ]
+}

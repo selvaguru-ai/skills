@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/machine3d/animation.schema.json",
+  "title": "Machine3D crank-slider animation contract v1",
+  "type": "object",
+  "required": ["schemaVersion", "machineId", "mechanism", "units", "crankRadius", "connectingRodLength", "entities"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "machineId": {"type": "string", "minLength": 1},
+    "mechanism": {"const": "crank_slider"},
+    "units": {"const": "meters"},
+    "crankRadius": {"type": "number", "exclusiveMinimum": 0},
+    "connectingRodLength": {"type": "number", "exclusiveMinimum": 0},
+    "entities": {
+      "type": "object",
+      "required": ["piston", "crankshaft", "connectingRod"],
+      "properties": {
+        "piston": {"type": "string"},
+        "crankshaft": {"type": "string"},
+        "connectingRod": {"type": "string"}
+      }
+    }
+  }
+}

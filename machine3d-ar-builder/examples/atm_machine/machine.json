@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "id": "atm_machine",
+  "displayName": "ATM with dispensing mechanism (concept)",
+  "machineType": "ATM",
+  "accuracy": "conceptual-educational",
+  "components": [
+    {
+      "id": "Cabinet",
+      "name": "ATM cabinet",
+      "description": "Encloses computing, banking, and cash transport modules.",
+      "entityName": "Cabinet",
+      "movable": false
+    },
+    {
+      "id": "Screen",
+      "name": "Display",
+      "description": "Shows transaction instructions.",
+      "entityName": "Screen",
+      "movable": false
+    },
+    {
+      "id": "Keypad",
+      "name": "Keypad",
+      "description": "Accepts PIN entry and commands.",
+      "entityName": "Keypad",
+      "movable": false
+    },
+    {
+      "id": "CardSlot",
+      "name": "Card reader",
+      "description": "Guides cards through the reader mechanism.",
+      "entityName": "CardSlot",
+      "movable": false
+    },
+    {
+      "id": "CashSlot",
+      "name": "Cash dispensing slot",
+      "description": "Opening for dispensed banknotes.",
+      "entityName": "CashSlot",
+      "movable": false
+    },
+    {
+      "id": "CashCassette",
+      "name": "Cash cassette",
+      "description": "Removable internal banknote storage.",
+      "entityName": "CashCassette",
+      "movable": true
+    },
+    {
+      "id": "TransportRoller1",
+      "name": "Feed roller",
+      "description": "Moves banknotes along the dispensing path.",
+      "entityName": "TransportRoller1",
+      "movable": true
+    },
+    {
+      "id": "TransportRoller2",
+      "name": "Output roller",
+      "description": "Transfers banknotes toward the exit.",
+      "entityName": "TransportRoller2",
+      "movable": true
+    }
+  ],
+  "warnings": [
+    "Conceptual teaching model, not a specific manufacturer's secure ATM architecture.",
+    "Actual dispenser timing, sensors and banknote path require a verified design."
+  ]
+}

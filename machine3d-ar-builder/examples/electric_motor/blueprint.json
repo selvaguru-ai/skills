@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 2,
+  "id": "electric_motor",
+  "displayName": "Electric motor (cutaway concept)",
+  "machineType": "electric motor",
+  "accuracy": "conceptual-educational",
+  "units": "meters",
+  "coordinateSystem": "Z_UP",
+  "components": [
+    {
+      "id": "Housing",
+      "name": "Motor housing",
+      "description": "Protective stationary cylindrical enclosure.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": {
+        "outerRadius": 0.077,
+        "innerRadius": 0.067,
+        "depth": 0.19,
+        "axis": "Y"
+      },
+      "material": "aluminum",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "RearCap",
+      "name": "Rear end cap",
+      "description": "Supports the rear shaft bearing.",
+      "primitive": "cylinder",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "dimensions": {
+        "radius": 0.075,
+        "depth": 0.012,
+        "axis": "Y"
+      },
+      "material": "dark",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "FrontCap",
+      "name": "Front end cap",
+      "description": "Supports the front shaft bearing.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        0.1,
+        0
+      ],
+      "dimensions": {
+        "outerRadius": 0.075,
+        "innerRadius": 0.01,
+        "depth": 0.012,
+        "axis": "Y"
+      },
+      "material": "dark",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Stator",
+      "name": "Stator core",
+      "description": "Stationary magnetic core around the rotor.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": {
+        "outerRadius": 0.066,
+        "innerRadius": 0.044,
+        "depth": 0.15,
+        "axis": "Y"
+      },
+      "material": "steel",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Rotor",
+      "name": "Rotor",
+      "description": "Rotating electromagnetic component.",
+      "primitive": "cylinder",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": {
+        "radius": 0.04,
+        "depth": 0.145,
+        "axis": "Y"
+      },
+      "material": "copper",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Shaft",
+      "name": "Output shaft",
+      "description": "Carries motor torque to an external load.",
+      "primitive": "cylinder",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": {
+        "radius": 0.009,
+        "depth": 0.29,
+        "axis": "Y"
+      },
+      "material": "dark",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "TerminalBox",
+      "name": "Terminal housing",
+      "description": "Connection point for electrical power.",
+      "primitive": "box",
+      "position": [
+        0,
+        0,
+        0.092
+      ],
+      "dimensions": {
+        "x": 0.067,
+        "y": 0.07,
+        "z": 0.038
+      },
+      "material": "blue",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "BearingFront",
+      "name": "Front bearing",
+      "description": "Supports the rotating shaft.",
+      "primitive": "torus",
+      "position": [
+        0,
+        0.105,
+        0
+      ],
+      "dimensions": {
+        "majorRadius": 0.017,
+        "minorRadius": 0.005,
+        "axis": "Y"
+      },
+      "material": "steel",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "animation": {
+    "schemaVersion": 2,
+    "machineId": "electric_motor",
+    "mechanism": "generic_joints",
+    "defaultRPM": 900,
+    "maxRPM": 6000,
+    "joints": [
+      {
+        "entity": "Rotor",
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      },
+      {
+        "entity": "Shaft",
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      }
+    ]
+  },
+  "warnings": [
+    "Conceptual motor: windings and electromagnetic fields are illustrative, not simulated.",
+    "Casing is an unsectioned hollow shell; hide parts in AR to inspect inside."
+  ]
+}

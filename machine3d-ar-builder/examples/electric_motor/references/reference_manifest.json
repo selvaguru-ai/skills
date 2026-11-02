@@ -1,0 +1,8 @@
+{
+  "createdUTC": "2026-11-01T15:01:38.609052+00:00",
+  "policy": "Reference images are not dimensionally authoritative; verify licensing before redistribution.",
+  "sources": [],
+  "fallback": "procedural geometry from conceptual dimensions in geometry_spec.json",
+  "mode": "offline",
+  "status": "fallback-geometry-without-external-images"
+}

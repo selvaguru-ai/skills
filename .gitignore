@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+
+# Generated builds and downloaded reference images, for this skill and future ones.
+# Reference manifests (JSON) stay in git. The image files do not.
+output/
+**/references/*.png
+**/references/*.jpg
+**/references/*.jpeg
+**/references/*.webp
+**/references/*.gif

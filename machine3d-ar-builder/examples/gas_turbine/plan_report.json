@@ -1,0 +1,17 @@
+{
+  "prompt": "Build a jet engine",
+  "machineId": "gas_turbine",
+  "buildKind": "generic",
+  "accuracy": "conceptual-educational",
+  "referenceStatus": "fallback-geometry-without-external-images",
+  "kinematics": {
+    "passed": true,
+    "mechanism": "generic_joints",
+    "joints": 3,
+    "note": "Schema validation only; physical collision/engineering checks still require review."
+  },
+  "metadata": {
+    "passed": true,
+    "errors": []
+  }
+}

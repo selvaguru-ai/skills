@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "id": "electric_motor",
+  "displayName": "Electric motor (cutaway concept)",
+  "machineType": "electric motor",
+  "accuracy": "conceptual-educational",
+  "components": [
+    {
+      "id": "Housing",
+      "name": "Motor housing",
+      "description": "Protective stationary cylindrical enclosure.",
+      "entityName": "Housing",
+      "movable": false
+    },
+    {
+      "id": "RearCap",
+      "name": "Rear end cap",
+      "description": "Supports the rear shaft bearing.",
+      "entityName": "RearCap",
+      "movable": false
+    },
+    {
+      "id": "FrontCap",
+      "name": "Front end cap",
+      "description": "Supports the front shaft bearing.",
+      "entityName": "FrontCap",
+      "movable": false
+    },
+    {
+      "id": "Stator",
+      "name": "Stator core",
+      "description": "Stationary magnetic core around the rotor.",
+      "entityName": "Stator",
+      "movable": false
+    },
+    {
+      "id": "Rotor",
+      "name": "Rotor",
+      "description": "Rotating electromagnetic component.",
+      "entityName": "Rotor",
+      "movable": true
+    },
+    {
+      "id": "Shaft",
+      "name": "Output shaft",
+      "description": "Carries motor torque to an external load.",
+      "entityName": "Shaft",
+      "movable": true
+    },
+    {
+      "id": "TerminalBox",
+      "name": "Terminal housing",
+      "description": "Connection point for electrical power.",
+      "entityName": "TerminalBox",
+      "movable": false
+    },
+    {
+      "id": "BearingFront",
+      "name": "Front bearing",
+      "description": "Supports the rotating shaft.",
+      "entityName": "BearingFront",
+      "movable": false
+    }
+  ],
+  "warnings": [
+    "Conceptual motor: windings and electromagnetic fields are illustrative, not simulated.",
+    "Casing is an unsectioned hollow shell; hide parts in AR to inspect inside."
+  ]
+}

@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+.DS_Store
+
+# Generated builds and downloaded reference images. Manifests stay in git.
+output/
+**/references/*.png
+**/references/*.jpg
+**/references/*.jpeg
+**/references/*.webp
+**/references/*.gif

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/machine3d/machine.schema.json",
+  "title": "Machine3D educational machine metadata v1",
+  "type": "object",
+  "required": ["schemaVersion", "id", "displayName", "machineType", "accuracy", "components"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "displayName": {"type": "string", "minLength": 1},
+    "machineType": {"type": "string"},
+    "accuracy": {"enum": ["conceptual-educational", "reference-approximate", "dimensionally-verified"]},
+    "components": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "movable", "entityName"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "movable": {"type": "boolean"},
+          "entityName": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

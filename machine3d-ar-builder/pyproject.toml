@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "machine3d-ar-builder"
+version = "0.3.0"
+description = "Extensible AI machine-blueprint/Blender/RealityKit pipeline for educational 3D AR assets"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8", "jsonschema>=4"]
+
+[project.scripts]
+machine3d = "machine3d.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["machine3d*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

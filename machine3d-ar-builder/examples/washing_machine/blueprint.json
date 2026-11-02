@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "id": "washing_machine",
+  "displayName": "Front-load washing machine (concept)",
+  "machineType": "washing machine",
+  "accuracy": "conceptual-educational",
+  "units": "meters",
+  "coordinateSystem": "Z_UP",
+  "components": [
+    {
+      "id": "Cabinet",
+      "name": "Washing machine cabinet",
+      "description": "Outer enclosure and structural support.",
+      "primitive": "box",
+      "position": [
+        0,
+        0,
+        0.46
+      ],
+      "dimensions": {
+        "x": 0.64,
+        "y": 0.61,
+        "z": 0.92
+      },
+      "material": "aluminum",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "OuterTub",
+      "name": "Outer tub",
+      "description": "Stationary water-containing tub.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        -0.04,
+        0.49
+      ],
+      "dimensions": {
+        "outerRadius": 0.265,
+        "innerRadius": 0.24,
+        "depth": 0.4,
+        "axis": "Y"
+      },
+      "material": "blue",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Drum",
+      "name": "Inner drum",
+      "description": "Rotates clothing during wash and spin cycles.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        -0.04,
+        0.49
+      ],
+      "dimensions": {
+        "outerRadius": 0.225,
+        "innerRadius": 0.211,
+        "depth": 0.35,
+        "axis": "Y"
+      },
+      "material": "steel",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "DriveShaft",
+      "name": "Drum shaft",
+      "description": "Transfers motor torque to drum.",
+      "primitive": "cylinder",
+      "position": [
+        0,
+        0.17,
+        0.49
+      ],
+      "dimensions": {
+        "radius": 0.018,
+        "depth": 0.2,
+        "axis": "Y"
+      },
+      "material": "dark",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Door",
+      "name": "Door ring",
+      "description": "Front access opening.",
+      "primitive": "torus",
+      "position": [
+        0,
+        -0.342,
+        0.49
+      ],
+      "dimensions": {
+        "majorRadius": 0.238,
+        "minorRadius": 0.021,
+        "axis": "Y"
+      },
+      "material": "dark",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "ControlPanel",
+      "name": "Control panel",
+      "description": "Selects operating cycles.",
+      "primitive": "box",
+      "position": [
+        0,
+        -0.313,
+        0.82
+      ],
+      "dimensions": {
+        "x": 0.55,
+        "y": 0.02,
+        "z": 0.1
+      },
+      "material": "cream",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "animation": {
+    "schemaVersion": 2,
+    "machineId": "washing_machine",
+    "mechanism": "generic_joints",
+    "defaultRPM": 70,
+    "maxRPM": 1400,
+    "joints": [
+      {
+        "entity": "Drum",
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      },
+      {
+        "entity": "DriveShaft",
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      }
+    ]
+  },
+  "warnings": [
+    "Conceptual arrangement; cabinet obscures interior unless isolated or hidden in viewer."
+  ]
+}

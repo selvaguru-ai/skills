@@ -1,0 +1,17 @@
+{
+  "prompt": "Create an interactive ATM with moving cash rollers",
+  "machineId": "atm_machine",
+  "buildKind": "generic",
+  "accuracy": "conceptual-educational",
+  "referenceStatus": "fallback-geometry-without-external-images",
+  "kinematics": {
+    "passed": true,
+    "mechanism": "generic_joints",
+    "joints": 2,
+    "note": "Schema validation only; physical collision/engineering checks still require review."
+  },
+  "metadata": {
+    "passed": true,
+    "errors": []
+  }
+}

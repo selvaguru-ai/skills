@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "washing_machine",
+  "displayName": "Front-load washing machine (concept)",
+  "machineType": "washing machine",
+  "accuracy": "conceptual-educational",
+  "components": [
+    {
+      "id": "Cabinet",
+      "name": "Washing machine cabinet",
+      "description": "Outer enclosure and structural support.",
+      "entityName": "Cabinet",
+      "movable": false
+    },
+    {
+      "id": "OuterTub",
+      "name": "Outer tub",
+      "description": "Stationary water-containing tub.",
+      "entityName": "OuterTub",
+      "movable": false
+    },
+    {
+      "id": "Drum",
+      "name": "Inner drum",
+      "description": "Rotates clothing during wash and spin cycles.",
+      "entityName": "Drum",
+      "movable": true
+    },
+    {
+      "id": "DriveShaft",
+      "name": "Drum shaft",
+      "description": "Transfers motor torque to drum.",
+      "entityName": "DriveShaft",
+      "movable": true
+    },
+    {
+      "id": "Door",
+      "name": "Door ring",
+      "description": "Front access opening.",
+      "entityName": "Door",
+      "movable": false
+    },
+    {
+      "id": "ControlPanel",
+      "name": "Control panel",
+      "description": "Selects operating cycles.",
+      "entityName": "ControlPanel",
+      "movable": false
+    }
+  ],
+  "warnings": [
+    "Conceptual arrangement; cabinet obscures interior unless isolated or hidden in viewer."
+  ]
+}

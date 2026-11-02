@@ -1,0 +1,17 @@
+{
+  "prompt": "Build an electric motor that rotates in AR",
+  "machineId": "electric_motor",
+  "buildKind": "generic",
+  "accuracy": "conceptual-educational",
+  "referenceStatus": "fallback-geometry-without-external-images",
+  "kinematics": {
+    "passed": true,
+    "mechanism": "generic_joints",
+    "joints": 2,
+    "note": "Schema validation only; physical collision/engineering checks still require review."
+  },
+  "metadata": {
+    "passed": true,
+    "errors": []
+  }
+}

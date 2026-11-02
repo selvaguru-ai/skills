@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "id": "gas_turbine",
+  "displayName": "Single-spool gas turbine (cutaway concept)",
+  "machineType": "gas turbine / jet engine",
+  "accuracy": "conceptual-educational",
+  "units": "meters",
+  "coordinateSystem": "Z_UP",
+  "components": [
+    {
+      "id": "OuterCase",
+      "name": "Engine casing",
+      "description": "Encloses compression, combustion and turbine stages.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": {
+        "outerRadius": 0.17,
+        "innerRadius": 0.15,
+        "depth": 0.75,
+        "axis": "Y"
+      },
+      "material": "aluminum",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Intake",
+      "name": "Air intake",
+      "description": "Guides incoming air toward the compressor.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        -0.44,
+        0
+      ],
+      "dimensions": {
+        "outerRadius": 0.18,
+        "innerRadius": 0.15,
+        "depth": 0.12,
+        "axis": "Y"
+      },
+      "material": "blue",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CompressorRotor",
+      "name": "Compressor rotor",
+      "description": "Accelerates incoming air before combustion.",
+      "primitive": "gear",
+      "position": [
+        0,
+        -0.22,
+        0
+      ],
+      "dimensions": {
+        "radius": 0.13,
+        "depth": 0.036,
+        "teeth": 18,
+        "axis": "Y"
+      },
+      "material": "steel",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CompressorStator",
+      "name": "Stationary compressor guide",
+      "description": "Guides compressed airflow through the engine core.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        -0.1,
+        0
+      ],
+      "dimensions": {
+        "outerRadius": 0.148,
+        "innerRadius": 0.105,
+        "depth": 0.04,
+        "axis": "Y"
+      },
+      "material": "dark",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "CombustionChamber",
+      "name": "Combustion chamber",
+      "description": "Mixes fuel and pressurized air, releasing heat during combustion.",
+      "primitive": "hollow_cylinder",
+      "position": [
+        0,
+        0.06,
+        0
+      ],
+      "dimensions": {
+        "outerRadius": 0.144,
+        "innerRadius": 0.085,
+        "depth": 0.19,
+        "axis": "Y"
+      },
+      "material": "orange",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "TurbineRotor",
+      "name": "Turbine rotor",
+      "description": "Extracts work from hot gas to drive the compressor shaft.",
+      "primitive": "gear",
+      "position": [
+        0,
+        0.24,
+        0
+      ],
+      "dimensions": {
+        "radius": 0.128,
+        "depth": 0.038,
+        "teeth": 14,
+        "axis": "Y"
+      },
+      "material": "copper",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "MainShaft",
+      "name": "Central shaft",
+      "description": "Couples turbine torque to the compressor rotor.",
+      "primitive": "cylinder",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "dimensions": {
+        "radius": 0.016,
+        "depth": 0.8,
+        "axis": "Y"
+      },
+      "material": "dark",
+      "movable": true,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "Nozzle",
+      "name": "Exhaust nozzle",
+      "description": "Channels hot exhaust gas rearward.",
+      "primitive": "cone",
+      "position": [
+        0,
+        0.44,
+        0
+      ],
+      "dimensions": {
+        "radiusBottom": 0.14,
+        "radiusTop": 0.1,
+        "depth": 0.16,
+        "axis": "Y"
+      },
+      "material": "aluminum",
+      "movable": false,
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "animation": {
+    "schemaVersion": 2,
+    "machineId": "gas_turbine",
+    "mechanism": "generic_joints",
+    "defaultRPM": 600,
+    "maxRPM": 12000,
+    "joints": [
+      {
+        "entity": "CompressorRotor",
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      },
+      {
+        "entity": "TurbineRotor",
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      },
+      {
+        "entity": "MainShaft",
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "ratio": 1.0,
+        "phase": 0.0,
+        "amplitude": 0.0,
+        "offset": 0.0
+      }
+    ]
+  },
+  "warnings": [
+    "Schematic compressor and turbine discs, not true aerodynamically designed blades.",
+    "No air thermodynamics, fuel injection, thermal stress, thrust or fluid simulation."
+  ]
+}

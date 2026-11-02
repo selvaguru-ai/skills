@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "machineId": "spur_gearbox",
+  "mechanism": "generic_joints",
+  "defaultRPM": 180,
+  "maxRPM": 2400,
+  "joints": [
+    {
+      "entity": "InputGear",
+      "type": "rotate",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "ratio": 1.0,
+      "phase": 0.0,
+      "amplitude": 0.0,
+      "offset": 0.0
+    },
+    {
+      "entity": "InputShaft",
+      "type": "rotate",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "ratio": 1.0,
+      "phase": 0.0,
+      "amplitude": 0.0,
+      "offset": 0.0
+    },
+    {
+      "entity": "OutputGear",
+      "type": "rotate",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "ratio": -0.5,
+      "phase": 0.0,
+      "amplitude": 0.0,
+      "offset": 0.0
+    },
+    {
+      "entity": "OutputShaft",
+      "type": "rotate",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "ratio": -0.5,
+      "phase": 0.0,
+      "amplitude": 0.0,
+      "offset": 0.0
+    }
+  ]
+}

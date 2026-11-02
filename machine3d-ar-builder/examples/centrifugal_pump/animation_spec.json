@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 2,
+  "machineId": "centrifugal_pump",
+  "mechanism": "generic_joints",
+  "defaultRPM": 900,
+  "maxRPM": 5000,
+  "joints": [
+    {
+      "entity": "Impeller",
+      "type": "rotate",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "ratio": 1.0,
+      "phase": 0.0,
+      "amplitude": 0.0,
+      "offset": 0.0
+    },
+    {
+      "entity": "Shaft",
+      "type": "rotate",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "ratio": 1.0,
+      "phase": 0.0,
+      "amplitude": 0.0,
+      "offset": 0.0
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "id": "spur_gearbox",
+  "displayName": "Two-gear reduction gearbox",
+  "machineType": "gearbox",
+  "accuracy": "conceptual-educational",
+  "components": [
+    {
+      "id": "Housing",
+      "name": "Gearbox housing",
+      "description": "Supports the shafts and encloses the gear train.",
+      "entityName": "Housing",
+      "movable": false
+    },
+    {
+      "id": "InputShaft",
+      "name": "Input shaft",
+      "description": "Receives input torque.",
+      "entityName": "InputShaft",
+      "movable": true
+    },
+    {
+      "id": "InputGear",
+      "name": "Small driving gear",
+      "description": "Rotates faster than the driven gear.",
+      "entityName": "InputGear",
+      "movable": true
+    },
+    {
+      "id": "OutputShaft",
+      "name": "Output shaft",
+      "description": "Transmits reduced speed and increased ideal torque.",
+      "entityName": "OutputShaft",
+      "movable": true
+    },
+    {
+      "id": "OutputGear",
+      "name": "Large driven gear",
+      "description": "Receives power from the input gear.",
+      "entityName": "OutputGear",
+      "movable": true
+    },
+    {
+      "id": "InputBearing",
+      "name": "Input bearing",
+      "description": "Supports input shaft rotation.",
+      "entityName": "InputBearing",
+      "movable": false
+    },
+    {
+      "id": "OutputBearing",
+      "name": "Output bearing",
+      "description": "Supports output shaft rotation.",
+      "entityName": "OutputBearing",
+      "movable": false
+    }
+  ],
+  "warnings": [
+    "Schematic involute approximation; not a verified tooth-contact or tolerance design.",
+    "Assumes a 2:1 ideal reduction, no backlash or losses."
+  ]
+}

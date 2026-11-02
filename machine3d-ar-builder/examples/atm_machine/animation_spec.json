@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 2,
+  "machineId": "atm_machine",
+  "mechanism": "generic_joints",
+  "defaultRPM": 60,
+  "maxRPM": 600,
+  "joints": [
+    {
+      "entity": "TransportRoller1",
+      "type": "rotate",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "ratio": 1.0,
+      "phase": 0.0,
+      "amplitude": 0.0,
+      "offset": 0.0
+    },
+    {
+      "entity": "TransportRoller2",
+      "type": "rotate",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "ratio": -1,
+      "phase": 0.0,
+      "amplitude": 0.0,
+      "offset": 0.0
+    }
+  ]
+}

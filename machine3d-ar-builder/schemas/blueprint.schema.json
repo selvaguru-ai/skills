@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/machine3d/blueprint.v2.schema.json",
+  "title": "Machine3D generic machine blueprint v2",
+  "type": "object",
+  "required": ["schemaVersion", "id", "displayName", "machineType", "units", "coordinateSystem", "components", "animation"],
+  "properties": {
+    "schemaVersion": {"const": 2},
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "displayName": {"type": "string", "minLength": 1},
+    "machineType": {"type": "string", "minLength": 1},
+    "accuracy": {"type": "string"},
+    "units": {"const": "meters"},
+    "coordinateSystem": {"const": "Z_UP"},
+    "components": {"type": "array", "minItems": 1, "maxItems": 300, "items": {"$ref": "#/$defs/component"}},
+    "animation": {"$ref": "#/$defs/animation"},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "vector": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+    "component": {
+      "type": "object",
+      "required": ["id", "name", "description", "primitive", "position", "dimensions", "material"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "name": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "primitive": {"enum": ["box", "cylinder", "hollow_cylinder", "sphere", "torus", "cone", "gear", "tube"]},
+        "position": {"$ref": "#/$defs/vector"},
+        "rotationDegrees": {"$ref": "#/$defs/vector"},
+        "dimensions": {"type": "object", "minProperties": 1},
+        "material": {"enum": ["aluminum", "steel", "dark", "copper", "blue", "orange", "green", "cream"]},
+        "movable": {"type": "boolean"},
+        "parent": {"type": "string"}
+      }
+    },
+    "animation": {
+      "type": "object",
+      "required": ["schemaVersion", "machineId", "mechanism", "defaultRPM", "maxRPM", "joints"],
+      "properties": {
+        "schemaVersion": {"const": 2},
+        "machineId": {"type": "string"},
+        "mechanism": {"const": "generic_joints"},
+        "defaultRPM": {"type": "number", "exclusiveMinimum": 0},
+        "maxRPM": {"type": "number", "exclusiveMinimum": 0},
+        "joints": {"type": "array", "maxItems": 500, "items": {"$ref": "#/$defs/joint"}}
+      }
+    },
+    "joint": {
+      "type": "object",
+      "required": ["entity", "type", "axis"],
+      "properties": {
+        "entity": {"type": "string"},
+        "type": {"enum": ["rotate", "slide", "oscillate"]},
+        "axis": {"$ref": "#/$defs/vector"},
+        "ratio": {"type": "number"},
+        "phase": {"type": "number"},
+        "amplitude": {"type": "number"},
+        "offset": {"type": "number"}
+      }
+    }
+  }
+}
